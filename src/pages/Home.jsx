@@ -16,6 +16,7 @@ const Home = () => {
       <div>
         <Banner />
       </div>
+
       {/* --- banner section end --- */}
 
       {/* --- popular food items section start --- */}

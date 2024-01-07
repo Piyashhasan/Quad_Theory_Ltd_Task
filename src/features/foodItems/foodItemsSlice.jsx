@@ -16,10 +16,8 @@ const initialState = {
 export const fetchFoodItems = createAsyncThunk(
   "foodItems/fetchFoodItems",
   async () => {
-    const res = await axios(
-      `http://www.api.technicaltest.quadtheoryltd.com/api/Item?page=1&pageSize=10`
-    );
-    return res?.data?.Items;
+    const res = await axios(`https://usermanagement-u339.onrender.com/user`);
+    return res?.data?.users;
   }
 );
 

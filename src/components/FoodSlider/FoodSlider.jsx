@@ -4,11 +4,11 @@ import Slider from "react-slick";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchFoodItems } from "../../features/foodItems/foodItemsSlice";
+import Loading from "../Loading/Loading";
 
 // eslint-disable-next-line react/prop-types
 const FoodSlider = ({ popular, recommended }) => {
-
-  const { popularFood, recommendedFood } = useSelector(
+  const { isLoading, popularFood, recommendedFood } = useSelector(
     (store) => store.foodItems
   );
 
@@ -52,6 +52,11 @@ const FoodSlider = ({ popular, recommended }) => {
       },
     ],
   };
+
+  if (isLoading) {
+    return <Loading></Loading>;
+  }
+  
   return (
     <div>
       <Slider {...settings}>
