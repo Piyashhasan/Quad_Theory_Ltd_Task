@@ -67,10 +67,10 @@ const FoodSlider = ({ popular, recommended }) => {
                 <div>
                   <img
                     className="rounded-lg object-cover w-[220px] h-[162px] sm:h-[275px] "
-                    src={items?.ImageUrl}
-                    alt={items?.Name}
+                    src={items?.imageUrl}
+                    alt={items?.name}
                   />
-                  <p className="text-center text-sm mt-3">{items?.Name}</p>
+                  <p className="text-center text-sm mt-3">{items?.name}</p>
                 </div>
               </div>
             );
@@ -82,8 +82,8 @@ const FoodSlider = ({ popular, recommended }) => {
                 <div>
                   <img
                     className="rounded-lg object-cover w-[220px] h-[162px] sm:h-[275px] "
-                    src={items?.ImageUrl}
-                    alt={items?.Name}
+                    src={items?.imageUrl}
+                    alt={items?.name}
                   />
                   <p className="text-center text-sm mt-3">{items?.Name}</p>
                 </div>

@@ -83,7 +83,7 @@ const PopularItems = () => {
                     >
                       <div className="mb-5">
                         <input
-                          {...register("Name", { required: true })}
+                          {...register("name", { required: true })}
                           type="text"
                           className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                           placeholder="Food Name"
@@ -92,7 +92,7 @@ const PopularItems = () => {
                       </div>
                       <div className="mb-5">
                         <input
-                          {...register("Price", { required: true })}
+                          {...register("price", { required: true })}
                           type="number"
                           className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                           placeholder="Price"
@@ -101,7 +101,7 @@ const PopularItems = () => {
                       </div>
                       <div className="mb-5">
                         <input
-                          {...register("ImageUrl", { required: true })}
+                          {...register("imageUrl", { required: true })}
                           type="text"
                           className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                           placeholder="Your food image URL"
@@ -115,7 +115,7 @@ const PopularItems = () => {
                           </label>
                           <div className="flex items-center me-4">
                             <input
-                              {...register("IsPopular")}
+                              {...register("isPopular")}
                               type="checkbox"
                               value="true"
                               className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
@@ -129,7 +129,7 @@ const PopularItems = () => {
                           </div>
                           <div className="flex items-center me-4">
                             <input
-                              {...register("IsRecommended")}
+                              {...register("isRecommended")}
                               type="checkbox"
                               value="true"
                               className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"

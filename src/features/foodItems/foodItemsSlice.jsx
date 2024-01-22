@@ -16,8 +16,8 @@ const initialState = {
 export const fetchFoodItems = createAsyncThunk(
   "foodItems/fetchFoodItems",
   async () => {
-    const res = await axios(`https://usermanagement-u339.onrender.com/user`);
-    return res?.data?.users;
+    const res = await axios(`https://pti-food.onrender.com/food`);
+    return res?.data?.foodItems;
   }
 );
 
@@ -27,27 +27,27 @@ export const foodItemsSlice = createSlice({
   initialState,
   reducers: {
     popularFood: (state) => {
-      let popular = state.foodItems.filter((items) => items.IsPopular === true);
+      let popular = state.foodItems.filter((items) => items.isPopular === true);
       state.popularFood = popular;
     },
     recommendedFood: (state) => {
       let recommended = state.foodItems.filter(
-        (items) => items.IsRecommended === true
+        (items) => items.isRecommended === true
       );
       state.recommendedFood = recommended;
     },
     addFoodItem: (state, action) => {
-      const Id = state.foodItems.length + 1;
+      const id = state.foodItems.length + 1;
       console.log(state.foodItems);
-      const { Name, Price, ImageUrl, IsPopular, IsRecommended } =
+      const { name, price, imageUrl, isPopular, isRecommended } =
         action.payload;
       const data = {
-        Id,
-        Name,
-        Price,
-        ImageUrl,
-        IsPopular: Boolean(IsPopular),
-        IsRecommended: Boolean(IsRecommended),
+        id,
+        name,
+        price,
+        imageUrl,
+        isPopular: Boolean(isPopular),
+        isRecommended: Boolean(isRecommended),
       };
       state.foodItems.push(data);
     },
